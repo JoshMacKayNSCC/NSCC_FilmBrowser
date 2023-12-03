@@ -1,0 +1,46 @@
+﻿<Window x:Class="FilmBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilmBrowser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="placeholder" UriSource="/Resources/placeholder.png"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Pages">
+                <MenuItem Header="_Home" Click="Navigate_Home"/>
+                <MenuItem Header="_Directors" Click="Navigate_Directors"/>
+                <MenuItem Header="_Actors" Click="Navigate_Actors"/>
+                <MenuItem Header="_MovieCatalog" Click="Navigate_Movie_Catalog"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Left">
+            <StackPanel Width="50">
+                <Button x:Name="Button_HomePage" ToolTip="Home" Click="Navigate_Home">
+                    <Image Source="{StaticResource placeholder}"/>
+                </Button>
+                <Button x:Name="Button_DirectorsPage" ToolTip="Directors" Click="Navigate_Directors">
+                    <Image Source="{StaticResource placeholder}"/>
+                </Button>
+                <Button x:Name="Button_ActorsPage" ToolTip="Actors" Click="Navigate_Actors">
+                    <Image Source="{StaticResource placeholder}"/>
+                </Button>
+                <Button x:Name="Button_MovieCatalogPage" ToolTip="Movies" Click="Navigate_Movie_Catalog">
+                    <Image Source="{StaticResource placeholder}"/>
+                </Button>
+            </StackPanel>
+        </ToolBar>
+        <Frame x:Name="Frame_PageDisplay">
+            
+        </Frame>
+    </DockPanel>
+</Window>
