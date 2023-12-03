@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FilmBrowser
+namespace FinalProject
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -21,6 +21,8 @@ namespace FilmBrowser
     public partial class MainWindow : Window
     {
         Page homePage = new Pages.Home();
+        Page movieCatalogPage = new Pages.MovieCatalog(); // Add this line
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,17 +36,17 @@ namespace FilmBrowser
 
         private void Navigate_Directors(object sender, RoutedEventArgs e)
         {
-
+            // Implement this when we have a Directors page
         }
 
         private void Navigate_Actors(object sender, RoutedEventArgs e)
         {
-
+            // Implement this when we have an Actors page
         }
 
         private void Navigate_Movie_Catalog(object sender, RoutedEventArgs e)
         {
-
+            Frame_PageDisplay.NavigationService.Navigate(movieCatalogPage);
         }
     }
 }

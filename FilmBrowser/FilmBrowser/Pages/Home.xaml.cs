@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FilmBrowser.Pages
+namespace FinalProject.Pages
 {
     /// <summary>
     /// Interaction logic for Home.xaml

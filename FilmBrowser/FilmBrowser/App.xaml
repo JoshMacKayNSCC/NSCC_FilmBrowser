@@ -1,7 +1,7 @@
-﻿<Application x:Class="FilmBrowser.App"
+﻿<Application x:Class="FinalProject.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FilmBrowser"
+             xmlns:local="clr-namespace:FinalProject"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
