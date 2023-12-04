@@ -3,7 +3,6 @@ using System.Windows;
 using System.Windows.Controls;
 using FinalProject.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Windows.Media;
 using System.Collections.Generic;
 using FinalProject.Models;
 
@@ -12,7 +11,7 @@ namespace FinalProject.Pages
     public partial class MovieCatalog : Page
     {
         public ImdbContext DbContext { get; set; }
-        private List<Title> allTitles; // To store all titles
+        private List<MovieGroup> _movieGroups;
 
         public MovieCatalog()
         {
@@ -22,46 +21,39 @@ namespace FinalProject.Pages
 
         private void Window_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            // Load data when the page is fully loaded
-            allTitles = DbContext.Titles.Include(t => t.Rating).ToList();
-            MoviesListView.ItemsSource = allTitles; // Initially display all titles
+            LoadData(); // Load initial data
         }
 
-        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            string searchQuery = ((TextBox)sender).Text.ToLower();
-            if (!string.IsNullOrWhiteSpace(searchQuery))
-            {
-                var filteredTitles = allTitles
-                    .Where(t => t.PrimaryTitle.ToLower().Contains(searchQuery))
-                    .ToList();
-
-                MoviesListView.ItemsSource = filteredTitles;
-            }
-            else
-            {
-                MoviesListView.ItemsSource = allTitles; // Reset to original list
-            }
+            LoadData(SearchBox.Text);
         }
 
-        private void SearchBox_GotFocus(object sender, System.Windows.RoutedEventArgs e)
+        private void LoadData(string searchQuery = null)
         {
-            TextBox searchBox = sender as TextBox;
-            if (searchBox != null && searchBox.Foreground == Brushes.Gray && searchBox.Text == "Search...")
-            {
-                searchBox.Text = string.Empty;
-                searchBox.Foreground = SystemColors.ControlTextBrush;
-            }
-        }
+            var query = DbContext.Titles.Include(t => t.Rating).AsQueryable();
 
-        private void SearchBox_LostFocus(object sender, System.Windows.RoutedEventArgs e)
-        {
-            TextBox searchBox = sender as TextBox;
-            if (searchBox != null && string.IsNullOrWhiteSpace(searchBox.Text))
+            if (!string.IsNullOrEmpty(searchQuery))
             {
-                searchBox.Text = "Search...";
-                searchBox.Foreground = Brushes.Gray;
+                query = query.Where(t => t.PrimaryTitle.ToLower().Contains(searchQuery.ToLower()));
             }
+
+            _movieGroups = query.ToList()
+                .GroupBy(t => t.PrimaryTitle.Substring(0, 1))
+                .OrderBy(g => g.Key)
+                .Select(g => new MovieGroup
+                {
+                    GroupHeader = g.Key + " (" + g.Count() + " movies)",
+                    Movies = g.ToList()
+                }).ToList();
+
+            MoviesListView.ItemsSource = _movieGroups;
         }
+    }
+
+    public class MovieGroup
+    {
+        public string GroupHeader { get; set; }
+        public List<Title> Movies { get; set; }
     }
 }
