@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="FilmBrowser.HomeDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FilmBrowser"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300">
+    <Border Padding="5">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="Results" FontSize="20"/>
+        <StackPanel x:Name="StackPanel_QueryResults" Orientation="Vertical">
+            <TextBlock x:Name="TB_Result1" Text="Test" FontSize="16"/>
+            <TextBlock x:Name="TB_Result2" Text="Test" FontSize="16"/>
+            <TextBlock x:Name="TB_Result3" Text="Test" FontSize="16"/>
+        </StackPanel>
+    </StackPanel>
+    </Border>
+</UserControl>

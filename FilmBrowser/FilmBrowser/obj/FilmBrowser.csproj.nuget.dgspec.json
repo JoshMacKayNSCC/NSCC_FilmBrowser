@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PROG2500\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj": {}
+    "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj": {}
   },
   "projects": {
-    "C:\\PROG2500\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj": {
+    "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PROG2500\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
+        "projectUniqueName": "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
         "projectName": "FilmBrowser",
-        "projectPath": "C:\\PROG2500\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
-        "packagesPath": "C:\\Users\\NSCC\\.nuget\\packages\\",
-        "outputPath": "C:\\PROG2500\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\obj\\",
+        "projectPath": "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
+        "packagesPath": "C:\\Users\\tooma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NSCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tooma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,9 +25,8 @@
           "net7.0-windows"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://contoso.com/packages/": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-windows7.0": {
@@ -85,7 +84,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

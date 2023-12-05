@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FinalProject.Pages
+namespace FilmBrowser
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for HomeDisplay.xaml
     /// </summary>
-    public partial class Home : Page
+    public partial class HomeDisplay : UserControl
     {
-        public Home()
+        public HomeDisplay()
         {
             InitializeComponent();
-
         }
     }
 }
