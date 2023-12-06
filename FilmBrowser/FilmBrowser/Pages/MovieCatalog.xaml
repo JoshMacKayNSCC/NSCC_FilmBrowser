@@ -5,40 +5,47 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Row for search bar, button, and progress bar -->
+            <!-- Row for title and search section -->
             <RowDefinition Height="*"/>
             <!-- Row for the movie list -->
         </Grid.RowDefinitions>
 
-        <!-- Grid for the search bar, button, and progress bar -->
-        <Grid Grid.Row="0" Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <!-- Column for the search bar -->
-                <ColumnDefinition Width="Auto"/>
-                <!-- Column for the search button -->
-            </Grid.ColumnDefinitions>
+        <!-- Title and Search Section -->
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock FontSize="18">
+                <Run FontWeight="Bold">IMDB MovieCatalog</Run>
+                <Run xml:space="preserve"> Search Movies:</Run>
+            </TextBlock>
 
-            <!-- Search Box with Tooltip and resizable -->
-            <TextBox x:Name="SearchBox" Grid.Column="0" 
-                     HorizontalAlignment="Stretch" 
-                     VerticalAlignment="Center"
-                     ToolTip="Enter text and hit search for results"/>
+            <Grid Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <!-- Column for the search bar -->
+                    <ColumnDefinition Width="Auto"/>
+                    <!-- Column for the search button -->
+                </Grid.ColumnDefinitions>
 
-            <!-- Search Button -->
-            <Button x:Name="SearchButton" Grid.Column="1"
-                    Content="Search" 
-                    Margin="5,0,0,0" 
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Right"
-                    Click="SearchButton_Click"/>
+                <!-- Search Box with Tooltip and resizable -->
+                <TextBox x:Name="SearchBox" Grid.Column="0" 
+                         HorizontalAlignment="Stretch" 
+                         VerticalAlignment="Center"
+                         ToolTip="Enter text and hit search for results"/>
+
+                <!-- Search Button -->
+                <Button x:Name="SearchButton" Grid.Column="1"
+                        Content="Search" 
+                        Margin="5,0,0,0" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Click="SearchButton_Click"/>
+            </Grid>
 
             <!-- Progress Bar -->
-            <ProgressBar x:Name="SearchProgressBar" Grid.Column="0" 
+            <ProgressBar x:Name="SearchProgressBar" 
                          Height="5" Margin="0,5" 
                          HorizontalAlignment="Stretch" 
                          Visibility="Collapsed"/>
-        </Grid>
+        </StackPanel>
 
         <!-- ListView for Movie Groupings -->
         <ListView x:Name="MoviesListView" Grid.Row="1" Margin="10">
@@ -50,9 +57,18 @@
                                 <DataTemplate>
                                     <!-- Display movie details here -->
                                     <StackPanel>
-                                        <TextBlock Text="{Binding PrimaryTitle}"/>
-                                        <TextBlock Text="{Binding StartYear}"/>
-                                        <TextBlock Text="{Binding Rating.AverageRating}"/>
+                                        <TextBlock>
+                                        <Run Text="Movie: "/>
+                                        <Run Text="{Binding PrimaryTitle, FallbackValue=Unknown}"/>
+                                        </TextBlock>
+                                        <TextBlock>
+                                        <Run Text="Year: "/>
+                                        <Run Text="{Binding StartYear, FallbackValue=Unknown}"/>
+                                        </TextBlock>
+                                        <TextBlock>
+                                        <Run Text="Rating: "/>
+                                        <Run Text="{Binding Rating.AverageRating, FallbackValue=Unknown}"/>
+                                        </TextBlock>
                                         <!-- Add more details as needed -->
                                     </StackPanel>
                                 </DataTemplate>
