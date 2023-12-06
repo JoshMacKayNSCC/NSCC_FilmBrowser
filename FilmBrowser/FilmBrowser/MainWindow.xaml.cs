@@ -49,5 +49,10 @@ namespace FinalProject
         {
             Frame_PageDisplay.NavigationService.Navigate(movieCatalogPage);
         }
+
+        private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
