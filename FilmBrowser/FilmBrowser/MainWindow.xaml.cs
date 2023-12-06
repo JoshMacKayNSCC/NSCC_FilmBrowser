@@ -37,6 +37,7 @@ namespace FinalProject
         private void Navigate_Directors(object sender, RoutedEventArgs e)
         {
             // Implement this when we have a Directors page
+            Frame_PageDisplay.Navigate(new Uri("/Pages/Directors.xaml", UriKind.Relative));
         }
 
         private void Navigate_Actors(object sender, RoutedEventArgs e)

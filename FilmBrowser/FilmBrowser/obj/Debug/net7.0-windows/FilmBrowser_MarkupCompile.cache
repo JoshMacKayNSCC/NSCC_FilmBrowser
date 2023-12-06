@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\
+C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\
 FilmBrowser
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\App.xaml
-3-1614571026
+C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\App.xaml
+51121004604
 
-131175242777
-226-408844666
-MainWindow.xaml;Pages\Home.xaml;Pages\MovieCatalog.xaml;
+15835370040
+226-1938287106
+HomeDisplay.xaml;MainWindow.xaml;Pages\Directors.xaml;Pages\Home.xaml;Pages\MovieCatalog.xaml;
 
 False
 

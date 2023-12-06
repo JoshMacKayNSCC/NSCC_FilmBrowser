@@ -2886,24 +2886,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tooma\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\heral\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
+      "projectUniqueName": "C:\\Users\\heral\\Source\\Repos\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
       "projectName": "FilmBrowser",
-      "projectPath": "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
-      "packagesPath": "C:\\Users\\tooma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tooma\\OneDrive\\Documents\\GitHub\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\obj\\",
+      "projectPath": "C:\\Users\\heral\\Source\\Repos\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\FilmBrowser.csproj",
+      "packagesPath": "C:\\Users\\heral\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\heral\\Source\\Repos\\NSCC_FilmBrowser\\FilmBrowser\\FilmBrowser\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\tooma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\heral\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
