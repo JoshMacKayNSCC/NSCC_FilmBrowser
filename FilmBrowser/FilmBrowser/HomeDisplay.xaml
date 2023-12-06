@@ -6,14 +6,20 @@
              xmlns:local="clr-namespace:FilmBrowser"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="300">
-    <Border Padding="5">
-    <StackPanel Orientation="Vertical">
-        <TextBlock Text="Results" FontSize="20"/>
-        <StackPanel x:Name="StackPanel_QueryResults" Orientation="Vertical">
-            <TextBlock x:Name="TB_Result1" Text="Test" FontSize="16"/>
-            <TextBlock x:Name="TB_Result2" Text="Test" FontSize="16"/>
-            <TextBlock x:Name="TB_Result3" Text="Test" FontSize="16"/>
-        </StackPanel>
-    </StackPanel>
-    </Border>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Border Style="{StaticResource ThinBorder}">
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="TB_Category" Text="Results" Style="{StaticResource Home_QueryCategory}"/>
+                <StackPanel x:Name="StackPanel_QueryResults" Orientation="Vertical">
+                    
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
 </UserControl>

@@ -130,6 +130,7 @@ C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowse
 C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\FilmBrowser.pdb
 C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\FilmBrowser.genruntimeconfig.cache
 C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\ref\FilmBrowser.dll
+<<<<<<< HEAD
 C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\bin\Debug\net7.0-windows\FilmBrowser.exe
 C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\bin\Debug\net7.0-windows\FilmBrowser.deps.json
 C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\bin\Debug\net7.0-windows\FilmBrowser.runtimeconfig.json
@@ -201,3 +202,8 @@ C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\n
 C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\FilmBrowser.pdb
 C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\FilmBrowser.genruntimeconfig.cache
 C:\Users\heral\Source\Repos\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\ref\FilmBrowser.dll
+=======
+C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\HomeDisplay.g.cs
+C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\App.baml
+C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\HomeDisplay.baml
+>>>>>>> 341488e0236f5d24c36f6178ea28f07476e28234
