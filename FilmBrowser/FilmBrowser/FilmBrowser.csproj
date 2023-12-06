@@ -22,7 +22,15 @@
 
 	<ItemGroup>
 		<None Remove="Resources/placeholder.png" />
+		<None Remove="Resources\ActorsIcon.png" />
+		<None Remove="Resources\DirectorsIcon.png" />
+		<None Remove="Resources\HomeIcon.png" />
+		<None Remove="Resources\MovieCatalogIcon.png" />
 		<Resource Include="Resources/placeholder.png" />
+		<Resource Include="Resources\ActorsIcon.png" />
+		<Resource Include="Resources\DirectorsIcon.png" />
+		<Resource Include="Resources\HomeIcon.png" />
+		<Resource Include="Resources\MovieCatalogIcon.png" />
 	</ItemGroup>
 
 </Project>

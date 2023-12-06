@@ -27,6 +27,6 @@
             <Setter Property="Padding" Value="5"/>
             <Setter Property="BorderBrush" Value="DarkGray"/>
         </Style>
-        
+
     </Application.Resources>
 </Application>

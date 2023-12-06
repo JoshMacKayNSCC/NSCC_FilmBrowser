@@ -8,4 +8,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FilmBrowser
+<<<<<<< HEAD
 build_property.ProjectDir = C:\PROG2500\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\
+=======
+build_property.ProjectDir = F:\NSCC_2ndYear\LastSemesterFall2023\WindowsProgrammingC#\Assignments\Assignment4_GroupProject\FilmBrowser\FilmBrowser\
+>>>>>>> main

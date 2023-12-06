@@ -14,7 +14,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
-                <MenuItem Header="_Exit"/>
+                <MenuItem Header="_Exit" Click="ExitMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="_Pages">
                 <MenuItem Header="_Home" Click="Navigate_Home"/>
