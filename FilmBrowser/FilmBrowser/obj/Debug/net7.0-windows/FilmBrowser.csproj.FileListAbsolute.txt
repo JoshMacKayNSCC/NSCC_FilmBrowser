@@ -130,3 +130,6 @@ C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowse
 C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\FilmBrowser.pdb
 C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\FilmBrowser.genruntimeconfig.cache
 C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\ref\FilmBrowser.dll
+C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\HomeDisplay.g.cs
+C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\App.baml
+C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\obj\Debug\net7.0-windows\HomeDisplay.baml

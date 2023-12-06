@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\tooma\OneDrive\Documents\GitHub\NSCC_FilmBrowser\FilmBrowser\FilmBrowser\App.xaml
-3-1614571026
+4576523297
 
-131175242777
+14872096517
 226-408844666
-MainWindow.xaml;Pages\Home.xaml;Pages\MovieCatalog.xaml;
+HomeDisplay.xaml;MainWindow.xaml;Pages\Home.xaml;Pages\MovieCatalog.xaml;
 
 False
 
