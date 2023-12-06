@@ -5,6 +5,7 @@ using FinalProject.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using FinalProject.Models;
+using System.Threading.Tasks; // Added for Task
 
 namespace FinalProject.Pages
 {
@@ -19,14 +20,35 @@ namespace FinalProject.Pages
             DbContext = new ImdbContext();
         }
 
-        private void Window_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             LoadData(); // Load initial data
         }
 
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        private async void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            LoadData(SearchBox.Text);
+            // Retrieve the search text on the UI thread
+            var searchQuery = SearchBox.Text;
+
+            // Show the progress bar and disable the search button
+            SearchProgressBar.Visibility = Visibility.Visible;
+            SearchProgressBar.IsIndeterminate = true;
+            SearchButton.IsEnabled = false;
+
+            // Perform the search operation asynchronously
+            await Task.Run(() => LoadData(searchQuery));
+
+            // After the search is complete, update the UI on the UI thread
+            Dispatcher.Invoke(() =>
+            {
+                // Update the ListView's ItemsSource
+                MoviesListView.ItemsSource = _movieGroups;
+
+                // Hide the progress bar and re-enable the search button
+                SearchProgressBar.Visibility = Visibility.Collapsed;
+                SearchProgressBar.IsIndeterminate = false;
+                SearchButton.IsEnabled = true;
+            });
         }
 
         private void LoadData(string searchQuery = null)
@@ -47,7 +69,7 @@ namespace FinalProject.Pages
                     Movies = g.ToList()
                 }).ToList();
 
-            MoviesListView.ItemsSource = _movieGroups;
+            // The UI update has been moved to the Dispatcher.Invoke in the SearchButton_Click method
         }
     }
 

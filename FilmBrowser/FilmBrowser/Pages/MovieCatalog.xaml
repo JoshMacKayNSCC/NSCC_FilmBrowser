@@ -5,18 +5,43 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <!-- Row for search bar, button, and progress bar -->
             <RowDefinition Height="*"/>
+            <!-- Row for the movie list -->
         </Grid.RowDefinitions>
 
-        <!-- Search Box -->
-        <TextBox x:Name="SearchBox" Grid.Row="0" Margin="10" />
+        <!-- Grid for the search bar, button, and progress bar -->
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <!-- Column for the search bar -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- Column for the search button -->
+            </Grid.ColumnDefinitions>
 
-        <!-- Search Button -->
-        <Button x:Name="SearchButton" Grid.Row="1" Content="Search" Margin="10" Click="SearchButton_Click"/>
+            <!-- Search Box with Tooltip and resizable -->
+            <TextBox x:Name="SearchBox" Grid.Column="0" 
+                     HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Center"
+                     ToolTip="Enter text and hit search for results"/>
+
+            <!-- Search Button -->
+            <Button x:Name="SearchButton" Grid.Column="1"
+                    Content="Search" 
+                    Margin="5,0,0,0" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Click="SearchButton_Click"/>
+
+            <!-- Progress Bar -->
+            <ProgressBar x:Name="SearchProgressBar" Grid.Column="0" 
+                         Height="5" Margin="0,5" 
+                         HorizontalAlignment="Stretch" 
+                         Visibility="Collapsed"/>
+        </Grid>
 
         <!-- ListView for Movie Groupings -->
-        <ListView x:Name="MoviesListView" Grid.Row="2" Margin="10">
+        <ListView x:Name="MoviesListView" Grid.Row="1" Margin="10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Expander Header="{Binding GroupHeader}" ToolTip="Click to view movies in this group">
