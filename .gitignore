@@ -362,3 +362,7 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /FilmBrowser/.vs/FilmBrowser/DesignTimeBuild/.dtbcache.v2
+
+/FilmBrowser/.vs/
+/FilmBrowser/FilmBrowser/obj/
+/FilmBrowser/FilmBrowser/obj/Debug/net7.0-windows/MainWindow.g.i.cs
