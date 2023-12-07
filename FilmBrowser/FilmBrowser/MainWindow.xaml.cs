@@ -36,7 +36,6 @@ namespace FinalProject
 
         private void Navigate_Directors(object sender, RoutedEventArgs e)
         {
-            // Implement this when we have a Directors page
             Frame_PageDisplay.Navigate(new Uri("/Pages/Directors.xaml", UriKind.Relative));
         }
 
@@ -48,6 +47,11 @@ namespace FinalProject
         private void Navigate_Movie_Catalog(object sender, RoutedEventArgs e)
         {
             Frame_PageDisplay.NavigationService.Navigate(movieCatalogPage);
+        }
+
+        private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

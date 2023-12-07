@@ -35,7 +35,6 @@ namespace FilmBrowser
             InitializeComponent();
             context = new ImdbContext();
             TB_Category.Text = category;
-            int i = 0;
             
             foreach (string query_result in q) {
                 TextBlock tb = new TextBlock();

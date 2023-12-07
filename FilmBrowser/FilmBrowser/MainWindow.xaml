@@ -5,16 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Movie Explorer" Height="450" Width="800">
     <Window.Resources>
         <ResourceDictionary>
             <BitmapImage x:Key="placeholder" UriSource="/Resources/placeholder.png"/>
+            <BitmapImage x:Key="icon_home" UriSource="/Resources/home.png"/>
+            <BitmapImage x:Key="icon_directors" UriSource="/Resources/directors.png"/>
+            <BitmapImage x:Key="icon_actors" UriSource="/Resources/actors.png"/>
+            <BitmapImage x:Key="icon_catalog" UriSource="/Resources/catalog.png"/>
+            <!--
+            Home:
+            https://freeicons.io/user-interface-icons-4/home-icon-36707
+            Muhammad Haq
+                
+            Actors:
+            https://freeicons.io/circus-icon-set-35942/drama-education-learning-mask-school-theater-art-arts-icon-1441441
+            Pexelpy
+            
+            Directors:
+            https://freeicons.io/entertainment-icon-set-31688/clapboard-clapperboard-film-filmmaking-icon-1176773
+            Pexelpy
+            
+            Catalog:
+            https://freeicons.io/movies-and-entertainment-2/movies-and-entertainment-cinema-film-icon-43230
+            Wishforge Games- https://wishforge.itch.io/
+            -->
         </ResourceDictionary>
     </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
-                <MenuItem Header="_Exit"/>
+                <MenuItem Header="_Exit" Click="MenuItem_Exit_Click"/>
             </MenuItem>
             <MenuItem Header="_Pages">
                 <MenuItem Header="_Home" Click="Navigate_Home"/>
@@ -23,22 +44,20 @@
                 <MenuItem Header="_MovieCatalog" Click="Navigate_Movie_Catalog"/>
             </MenuItem>
         </Menu>
-        <ToolBar DockPanel.Dock="Left">
-            <StackPanel Width="50">
-                <Button x:Name="Button_HomePage" ToolTip="Home" Click="Navigate_Home">
-                    <Image Source="{StaticResource placeholder}"/>
-                </Button>
-                <Button x:Name="Button_DirectorsPage" ToolTip="Directors" Click="Navigate_Directors">
-                    <Image Source="{StaticResource placeholder}"/>
-                </Button>
-                <Button x:Name="Button_ActorsPage" ToolTip="Actors" Click="Navigate_Actors">
-                    <Image Source="{StaticResource placeholder}"/>
-                </Button>
-                <Button x:Name="Button_MovieCatalogPage" ToolTip="Movies" Click="Navigate_Movie_Catalog">
-                    <Image Source="{StaticResource placeholder}"/>
-                </Button>
-            </StackPanel>
-        </ToolBar>
+        <StackPanel DockPanel.Dock="Left" x:Name="ToolBar_Nav" Style="{StaticResource NavBar}" Width="60">
+            <Button x:Name="Button_HomePage" ToolTip="Home" Click="Navigate_Home">
+                <Image Source="{StaticResource icon_home}"/>
+            </Button>
+            <Button x:Name="Button_DirectorsPage" ToolTip="Directors" Click="Navigate_Directors">
+                <Image Source="{StaticResource icon_directors}"/>
+            </Button>
+            <Button x:Name="Button_ActorsPage" ToolTip="Actors" Click="Navigate_Actors">
+                <Image Source="{StaticResource icon_actors}"/>
+            </Button>
+            <Button x:Name="Button_MovieCatalogPage" ToolTip="Movies" Click="Navigate_Movie_Catalog">
+                <Image Source="{StaticResource icon_catalog}"/>
+            </Button>
+        </StackPanel>
         <Frame x:Name="Frame_PageDisplay">
             
         </Frame>

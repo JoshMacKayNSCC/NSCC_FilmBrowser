@@ -42,19 +42,19 @@ namespace FinalProject.Pages
                  orderby rating.AverageRating descending
                  select title.PrimaryTitle).Take(resultAmount);
 
-            //HomeDisplay hd1 = new HomeDisplay("Newest Movie Releases", new_releases);
-            //HomeDisplay hd2 = new HomeDisplay("Top Rated Movies", top_rated);
-            //HomeDisplay hd3 = new HomeDisplay();
-            //Grid.SetRow(hd1, 0);
-            //Grid.SetColumn(hd1, 0);
-            //Grid.SetRow(hd2, 0);
-            //Grid.SetColumn(hd2, 1);
-            //Grid.SetRow(hd3, 1);
-            //Grid.SetColumn(hd3, 0);
+            HomeDisplay hd1 = new HomeDisplay("Newest Movie Releases", new_releases);
+            HomeDisplay hd2 = new HomeDisplay("Top Rated Movies", top_rated);
+            HomeDisplay hd3 = new HomeDisplay();
+            Grid.SetRow(hd1, 0);
+            Grid.SetColumn(hd1, 0);
+            Grid.SetRow(hd2, 0);
+            Grid.SetColumn(hd2, 1);
+            Grid.SetRow(hd3, 1);
+            Grid.SetColumn(hd3, 0);
 
-            //Grid_Display.Children.Add(hd1);
-            //Grid_Display.Children.Add(hd2);
-            //Grid_Display.Children.Add(hd3);
+            Grid_Display.Children.Add(hd1);
+            Grid_Display.Children.Add(hd2);
+            Grid_Display.Children.Add(hd3);
 
         }
     }

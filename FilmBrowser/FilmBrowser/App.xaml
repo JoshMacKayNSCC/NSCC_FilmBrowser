@@ -25,8 +25,22 @@
         <Style x:Key="ThinBorder" TargetType="Border">
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="5"/>
-            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
         </Style>
-        
+
+        <Style x:Key="NavBar" TargetType="StackPanel">
+            <Setter Property="Background" Value="DarkGray"/>
+            <Style.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Margin" Value="3"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="GridBackground" TargetType="Grid">
+            <Setter Property="Background" Value="DarkGray"/>
+        </Style>
     </Application.Resources>
 </Application>
