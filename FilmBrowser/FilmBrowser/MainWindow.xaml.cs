@@ -41,7 +41,7 @@ namespace FinalProject
 
         private void Navigate_Actors(object sender, RoutedEventArgs e)
         {
-            // Implement this when we have an Actors page
+            Frame_PageDisplay.Navigate(new Uri("/Pages/Actors.xaml", UriKind.Relative));
         }
 
         private void Navigate_Movie_Catalog(object sender, RoutedEventArgs e)
