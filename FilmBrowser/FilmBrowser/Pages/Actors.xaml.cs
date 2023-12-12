@@ -49,7 +49,7 @@ namespace FilmBrowser.Pages
                                      actor = actorGroup.ToList<Name>()
                                  };
 
-
+        
             actorsListView.ItemsSource = catalogueQuery.ToList();
         }
 

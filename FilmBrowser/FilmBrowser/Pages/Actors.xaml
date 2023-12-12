@@ -55,16 +55,17 @@
                             <TextBlock Text="  (" xml:space="preserve"></TextBlock>
                             <TextBlock Text="{Binding actorCount}"/>
                             <TextBlock Text=")"></TextBlock>
-                            <Expander Header=" View Directors" FontSize="20" MaxHeight="300">
+                            <Expander Header=" View Actors" FontSize="20" MaxHeight="300">
                                 <ListView ItemsSource="{Binding actor}" ScrollViewer.VerticalScrollBarVisibility="Visible"
                                         ScrollViewer.CanContentScroll="True" Width="auto">
                                     <ListView.ItemTemplate>
                                         <DataTemplate DataType="local:Actors">
                                             <StackPanel Orientation="Horizontal" Width="auto" Margin="0,0,0,10">
                                                 <TextBlock Text="{Binding PrimaryName}" Margin="0,0,5,0" FontWeight="Bold"/>
-                                                <TextBlock Text="{Binding PrimaryProfession}" Margin="10,0,0,0" FontStyle="Italic"/>
-                                                <TextBlock Text=" Birth year-" Margin="10,0,0,0"/>
+                                                <TextBlock Text=" Birth-" Margin="10,0,0,0"/>
                                                 <TextBlock Text="{Binding BirthYear}" FontStyle="Italic"/>
+                                                <TextBlock Text=" Death-" Margin="10,0,0,0"/>
+                                                <TextBlock Text="{Binding GetDeathYear}" FontStyle="Italic"/>
                                             </StackPanel>
                                         </DataTemplate>
                                     </ListView.ItemTemplate>
