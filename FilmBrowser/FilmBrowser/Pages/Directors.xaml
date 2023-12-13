@@ -9,27 +9,63 @@
       Title="Directors">
     <Page.Resources>
         <CollectionViewSource x:Key="directorsViewSource"></CollectionViewSource>
-
+        <!--
+        <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Karacis - Flaticon</a>-->
+        <BitmapImage x:Key="searchImage" UriSource="/Resources/search.png"/>
+        <LinearGradientBrush x:Key="brush" StartPoint="0,1" EndPoint="0,0">
+            <GradientStop Color="Gray" Offset="0" />
+            <!-- Light Green -->
+            <GradientStop Color="White" Offset="1" />
+            <!-- Dark Green -->
+        </LinearGradientBrush>
     </Page.Resources>
     <StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,0,0,10">
+        <StackPanel Grid.Row="0" Background="{StaticResource brush}">
             <TextBlock FontSize="18">
         <Run FontWeight="Bold">IMDB Directors</Run>
         <Run xml:space="preserve"> Search Directors:</Run>
             </TextBlock>
-            <TextBox x:Name="searchBox" Width="300" Margin="20,0,3,0">
 
-            </TextBox>
-            <Button x:Name="searchButton" Width="25" Click="searchButton_Click" ToolTip="Search">
+            <Grid Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <!-- Column for the search bar -->
+                    <ColumnDefinition Width="Auto"/>
+                    <!-- Column for the search button -->
+                </Grid.ColumnDefinitions>
 
-            </Button>
+                <!-- Search Box with Tooltip and resizable -->
+                <TextBox x:Name="searchBox" Grid.Column="0" 
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Center"
+                 ToolTip="Enter text and hit search for results"
+                         Height="30"/>
+
+                <!-- Search Button -->
+                <Button x:Name="SearchButton" Grid.Column="1" 
+                Margin="5,0,0,0" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Click="searchButton_Click"
+                        Width="35"
+                        Height="35">
+                    <Image Source="{StaticResource searchImage}"/>
+                </Button>
+            </Grid>
+
         </StackPanel>
         <StackPanel>
             <ListView x:Name="directorsListView" ScrollViewer.VerticalScrollBarVisibility="Visible"
-            ScrollViewer.CanContentScroll="True" Width="auto" Height=" 600">
+            ScrollViewer.CanContentScroll="True" Width="auto" Height="600" Background="{StaticResource brush}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Background" Value="{StaticResource brush}" />
+
+                    </Style>
+                </ListView.ItemContainerStyle>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" Background="{StaticResource brush}">
                             <TextBlock Text="{Binding Index}" FontWeight="Bold" FontSize="14"></TextBlock>
                             <TextBlock Text="  (" xml:space="preserve"></TextBlock>
                             <TextBlock Text="{Binding directorCount}"/>
@@ -37,11 +73,17 @@
                             <Expander Header=" View Directors" FontSize="20" MaxHeight="300">
                                 <ListView ItemsSource="{Binding director}" ScrollViewer.VerticalScrollBarVisibility="Visible"
             ScrollViewer.CanContentScroll="True" Width="auto">
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="ListViewItem">
+                                            <Setter Property="Background" Value="{StaticResource brush}" />
+
+                                        </Style>
+                                    </ListView.ItemContainerStyle>
                                     <ListView.ItemTemplate>
                                         <DataTemplate DataType="local:Directors">
-                                            <StackPanel Orientation="Horizontal" Width="auto" Margin="0,0,0,10">
-                                                <TextBlock Text="{Binding PrimaryName}" Margin="0,0,5,0" FontWeight="Bold"/>
-                                                <TextBlock Text="{Binding PrimaryProfession}" Margin="10,0,0,0" FontStyle="Italic"/>
+                                            <StackPanel Orientation="Horizontal" Width="auto" Margin="10" >
+                                                <TextBlock Text="{Binding PrimaryName}" Margin="10" FontWeight="Bold"/>
+                                                <TextBlock Text="{Binding PrimaryProfession}" Margin="10" FontStyle="Italic"/>
                                             </StackPanel>
                                         </DataTemplate>
                                     </ListView.ItemTemplate>

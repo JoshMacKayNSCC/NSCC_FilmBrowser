@@ -35,13 +35,13 @@ namespace FilmBrowser
             InitializeComponent();
             context = new ImdbContext();
             TB_Category.Text = category;
-            
-            foreach (string query_result in q) {
-                TextBlock tb = new TextBlock();
-                tb.Text = query_result;
-                tb.Style = (Style)FindResource(resourceKey: "Home_QueryResult");
-                StackPanel_QueryResults.Children.Add(tb);
-            }
+
+            //foreach (string query_result in q) {
+              //  TextBlock tb = new TextBlock();
+                //tb.Text = query_result;
+                //tb.Style = (Style)FindResource(resourceKey: "Home_QueryResult");
+               // StackPanel_QueryResults.Children.Add(tb);
+            //}
             this.HorizontalAlignment = HorizontalAlignment.Center;
             this.VerticalAlignment = VerticalAlignment.Center;
         }

@@ -26,11 +26,13 @@
 		<None Remove="Resources\catalog.png" />
 		<None Remove="Resources\directors.png" />
 		<None Remove="Resources\home.png" />
+		<None Remove="Resources\search.png" />
 		<Resource Include="Resources/placeholder.png" />
 		<Resource Include="Resources\actors.png" />
 		<Resource Include="Resources\catalog.png" />
 		<Resource Include="Resources\directors.png" />
 		<Resource Include="Resources\home.png" />
+		<Resource Include="Resources\search.png" />
 	</ItemGroup>
 
 </Project>
